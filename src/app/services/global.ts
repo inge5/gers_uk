@@ -1,0 +1,6 @@
+export var GLOBAL = {
+  //URL's USA
+  baseUsa: 'https://backend.gers.com.co/usa/wp-json/acf/v3',
+  urlUsa: 'https://backend.gers.com.co/usa/wp-json/wp/v2',
+  menuUsa: 'https://backend.gers.com.co/usa/wp-json/menus/v1',
+};
