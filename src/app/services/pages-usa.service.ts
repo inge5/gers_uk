@@ -4,56 +4,54 @@ import { Observable, throwError } from 'rxjs';
 import { environment } from 'src/environments/environment';
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
 export class PagesUsaService {
   public url: string;
 
-  constructor(private _http: HttpClient) { 
-    this.url = environment.urlUsa;
+  constructor(private _http: HttpClient) {
+    this.url = environment.urlUk;
   }
 
-  getCorporateThinking(): Observable<any>{
+  getCorporateThinking(): Observable<any> {
     return this._http.get(`${this.url}/pages/117/`);
   }
 
-  getContact(): Observable<any>{
+  getContact(): Observable<any> {
     return this._http.get(`${this.url}/pages/203`);
   }
 
-  getProyects(): Observable<any>{
+  getProyects(): Observable<any> {
     return this._http.get(`${this.url}/pages/349`);
   }
-  getDataProtectionPolicy(): Observable<any>{
+  getDataProtectionPolicy(): Observable<any> {
     return this._http.get(`${this.url}/pages/409`);
   }
 
   /**** Representaciones USA ****/
-  getNeplanUsa(): Observable<any>{
-    return this._http.get(`${this.url}/representaciones/208`)
+  getNeplanUsa(): Observable<any> {
+    return this._http.get(`${this.url}/representaciones/208`);
   }
 
   /**** Servicios USA ****/
-  getPowerSystemStudies(): Observable<any>{
+  getPowerSystemStudies(): Observable<any> {
     return this._http.get(`${this.url}/servicios/209`);
   }
 
-  getSmartGridsUsa(): Observable<any>{
+  getSmartGridsUsa(): Observable<any> {
     return this._http.get(`${this.url}/servicios/221`);
   }
 
-  getProtectionAndControl(): Observable<any>{
+  getProtectionAndControl(): Observable<any> {
     return this._http.get(`${this.url}/servicios/232`);
   }
 
-  getFieldServices(): Observable<any>{
+  getFieldServices(): Observable<any> {
     return this._http.get(`${this.url}/servicios/245`);
   }
 
   /*** Proyectos USA***/
-  getProyectsUsa(): Observable<any>{
+  getProyectsUsa(): Observable<any> {
     return this._http.get(`${this.url}/proyectos_usa?per_page=40`);
   }
-
-  
 }

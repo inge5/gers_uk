@@ -4,26 +4,25 @@ import { Observable } from 'rxjs';
 import { environment } from 'src/environments/environment';
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
 export class MenusUsaService {
   public menu: string;
 
-  constructor(public _http: HttpClient) { 
-    this.menu = environment.menuUsa;
+  constructor(public _http: HttpClient) {
+    this.menu = environment.menuUk;
   }
 
-  getMenuPrincipal(): Observable<any>{
+  getMenuPrincipal(): Observable<any> {
     return this._http.get(`${this.menu}/menus/menu-principal`);
   }
-  getFooterAbout(): Observable<any>{
+  getFooterAbout(): Observable<any> {
     return this._http.get(`${this.menu}/menus/21`);
   }
-  getFooterContact(): Observable<any>{
+  getFooterContact(): Observable<any> {
     return this._http.get(`${this.menu}/menus/22`);
   }
-  getFooterSocial(): Observable<any>{
+  getFooterSocial(): Observable<any> {
     return this._http.get(`${this.menu}/menus/23`);
   }
 }
-

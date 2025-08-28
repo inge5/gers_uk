@@ -1,27 +1,27 @@
 import { Injectable } from '@angular/core';
-import { HttpClient, HttpHeaders } from '@angular/common/http';;
+import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Observable } from 'rxjs';
 import { environment } from 'src/environments/environment';
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
 export class HomeUsaService {
-  public baseUsa: string;
-  public urlUsa: string;
+  public baseUk: string;
+  public urlUk: string;
 
-  constructor(public _http: HttpClient) { 
-    this.baseUsa = environment.baseUsa;
-    this.urlUsa = environment.urlUsa;
+  constructor(public _http: HttpClient) {
+    this.baseUk = environment.baseUk;
+    this.urlUk = environment.urlUk;
   }
 
-  getHomeUsa(): Observable<any>{
-    return this._http.get(`${this.baseUsa}/pages/70/`);
+  getHomeUsa(): Observable<any> {
+    return this._http.get(`${this.baseUk}/pages/70/`);
   }
 
   /*
   getProyects(): Observable<any>{
-    return this._http.get(`${this.urlUsa}/proyectos/`);
+    return this._http.get(`${this.urlUk}/proyectos/`);
   }
   */
 }

@@ -12,7 +12,7 @@ export class PublicacionesUsaService {
   public url: string;
 
   constructor(private _http: HttpClient, private _router: Router) {
-    this.url = environment.urlUsa;
+    this.url = environment.urlUk;
   }
 
   getPublicaciones(): Observable<any> {
