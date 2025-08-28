@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { PagesUsaService } from '../../services/pages-usa.service';
 
 import Swal from 'sweetalert2/dist/sweetalert2.js';
-import { environment } from 'src/environments/environment';
+import { environment } from '../../../environments/environment';
 
 declare var $: any;
 
@@ -26,7 +26,7 @@ export class ContactComponent implements OnInit {
       nombre: '',
       email: '',
       empresa: '',
-      pais: 'Estados Unidos',
+      pais: 'U.K',
       asunto: '',
       acepto: '',
     };
@@ -44,7 +44,7 @@ export class ContactComponent implements OnInit {
 
   enviarForm_usa(form) {
     $.ajax({
-      url: `${environment.domain}/wp-content/themes/gers/formulario-contacto-usa/form-contactenos-usa.php`,
+      url: `${environment.domain}/wp-content/themes/gers/formulario-contacto-uk/form-contactenos-uk.php`,
       type: 'POST',
       data: JSON.stringify(this.user_usa),
       dataType: 'json',
@@ -58,8 +58,8 @@ export class ContactComponent implements OnInit {
             showConfirmButton: true,
           });
 
-          form.reset();
-          this.user_usa.pais = 'Estados Unidos';
+          // form.reset();
+          // this.user_usa.pais = 'U.K';
         } else {
           Swal.fire(
             'Oops...',

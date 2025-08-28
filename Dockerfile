@@ -13,6 +13,6 @@ COPY . .
 
 RUN npm run build:ssr
 
-EXPOSE 9010
+EXPOSE 9040
 
 CMD [ "npm", "run", "serve:ssr" ]
