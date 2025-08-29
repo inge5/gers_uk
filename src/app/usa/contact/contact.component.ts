@@ -58,8 +58,8 @@ export class ContactComponent implements OnInit {
             showConfirmButton: true,
           });
 
-          // form.reset();
-          // this.user_usa.pais = 'U.K';
+          form.reset();
+          this.user_usa.pais = 'U.K';
         } else {
           Swal.fire(
             'Oops...',
